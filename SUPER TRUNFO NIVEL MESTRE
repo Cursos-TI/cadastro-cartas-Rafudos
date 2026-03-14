@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+int main(){
+
+    char Estado[3];           
+    char Cidade[50];          
+    int Populacao;
+    float Area;
+    float PIB;
+    int PontoTuristico;
+    float DensidadePopulacional;
+    float PIBPerCapita;
+    float SuperPoder;
+
+
+    printf("ESCOLHA SEU ESTADO (SIGLA): \n");
+    scanf("%2s", Estado);
+
+    printf("ESCOLHA SUA CIDADE: \n"); 
+    scanf("%20s", Cidade);
+
+    printf("QUAL A POPULACAO DA SUA CIDADE? \n");
+    scanf("%d", &Populacao);
+
+    printf("QUAL A AREA DA SUA CIDADE? \n");
+    scanf("%f", &Area);
+    
+    printf("QUAL O PIB DA SUA CIDADE? \n");
+    scanf("%f", &PIB);
+
+    printf("QUANTOS PONTOS TURISTICOS TEM NA SUA CIDADE? \n");
+    scanf("%d", &PontoTuristico);
+
+    DensidadePopulacional = Populacao / Area;
+    PIBPerCapita = PIB / Populacao;
+    SuperPoder = Populacao + Area + PIB + PontoTuristico;
+
+    char Estado2[3];           
+    char Cidade2[50];          
+    int Populacao2;
+    float Area2;
+    float PIB2;
+    int PontoTuristico2;
+    float DensidadePopulacional2;
+    float PIBPerCapita2;
+    float SuperPoder2;
+
+
+    printf("ESCOLHA SEU SEGUNDO ESTADO (SIGLA): \n");
+    scanf("%2s", Estado2);
+
+    printf("ESCOLHA SUA SEGUNDA CIDADE: \n"); 
+    scanf("%20s", Cidade2);
+
+    printf("QUAL A POPULACAO DA SUA SEGUNDA CIDADE? \n");
+    scanf("%d", &Populacao2);
+
+    printf("QUAL A AREA DA SUA SEGUNDA CIDADE? \n");
+    scanf("%f", &Area2);
+    
+    printf("QUAL O PIB DA SUA SEGUNDA CIDADE? \n");
+    scanf("%f", &PIB2);
+
+    printf("QUANTOS PONTOS TURISTICOS TEM NA SUA SEGUNDA CIDADE? \n");
+    scanf("%d", &PontoTuristico2);
+
+    DensidadePopulacional2 = Populacao2 / Area2;
+    PIBPerCapita2 = PIB2 / Populacao2;
+    SuperPoder2 = Populacao2 + Area2 + PIB2 + PontoTuristico2;
+
+    printf("\n--- DADOS INFORMADOS ---\n");
+    printf("ESTADO: %s\n", Estado);
+    printf("CIDADE: %s\n", Cidade);
+    printf("POPULACAO: %d\n", Populacao);
+    printf("AREA: %.2f\n", Area);
+    printf("PIB: %.2f\n", PIB);
+    printf("PONTOS TURISTICOS: %d\n", PontoTuristico);
+    printf("DENSIDADE POPULACIONAL: %.2f\n", DensidadePopulacional);
+    printf("PIB PER CAPITA: %.2f\n", PIBPerCapita);
+
+    printf("\n--- DADOS INFORMADOS CARTA 2 ---\n");
+    printf("ESTADO: %s\n", Estado2);
+    printf("CIDADE: %s\n", Cidade2);
+    printf("POPULACAO: %d\n", Populacao2);
+    printf("AREA: %.2f\n", Area2);
+    printf("PIB: %.2f\n", PIB2);
+    printf("PONTOS TURISTICOS: %d\n", PontoTuristico2);
+    printf("DENSIDADE POPULACIONAL: %.2f\n", DensidadePopulacional2);
+    printf("PIB PER CAPITA: %.2f\n", PIBPerCapita2);
+
+    printf("\nCOMPARAÇÃO SUPERPODERES\n");
+    printf("SE O VALOR FOR IGUAL A 1, A CARTA 01 VENCEU\n");
+    printf("SE FOR IGUAL A 0, A CARTA 2 VENCEU\n");
+    printf("\nSUPER PODER 1 > SUPER PODER 2: %d\n", SuperPoder > SuperPoder2);
+
+    return 0;
+}
